@@ -1,16 +1,18 @@
 package com.funtl.itoken.service.admin.test.service;
-import java.math.BigDecimal;
 import java.util.Date;
 import java.util.UUID;
 
 import com.funtl.itoken.service.admin.ServiceAdminApplication;
 import com.funtl.itoken.service.admin.domain.TbSysUser;
 import com.funtl.itoken.service.admin.service.AdminService;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @Description :
@@ -20,6 +22,8 @@ import org.springframework.test.context.junit4.SpringRunner;
  **/
 @SpringBootTest(classes = ServiceAdminApplication.class)
 @RunWith(SpringRunner.class)
+@Transactional
+@Rollback
 public class adminServiceTest {
 
     @Autowired
@@ -46,7 +50,8 @@ public class adminServiceTest {
 
     @Test
     public void login(){
-
+        TbSysUser tbSysUser = adminService.login("706750966@qq.com","123456");
+        Assert.assertNotNull(tbSysUser);
     }
 
 }

@@ -16,6 +16,7 @@ import tk.mybatis.mapper.entity.Example;
  * @Version 1.0
  **/
 @Service
+@Transactional(readOnly = true)
 public class AdminServiceImpl implements AdminService {
 
     @Autowired
@@ -41,13 +42,11 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public TbSysUser login(String loginCode, String plantPassword) {
         Example example = new Example(TbSysUser.class);
-        example.createCriteria().andEqualTo("loginCode",loginCode).andEqualTo("plantPassword",plantPassword);
+        example.createCriteria().andEqualTo("loginCode",loginCode);
         TbSysUser tbSysUser = tbSysUserMapper.selectOneByExample(example);
-        if(tbSysUser != null){
-            String password = DigestUtils.md5DigestAsHex(plantPassword.getBytes());
-            if(password.equals(tbSysUser.getPassword())){
+        String password = DigestUtils.md5DigestAsHex(plantPassword.getBytes());
+        if(password.equals(tbSysUser.getPassword())){
                 return tbSysUser;
-            }
         }
         return null;
     }
