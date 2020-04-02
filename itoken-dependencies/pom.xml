@@ -31,6 +31,7 @@
         <module>../itoken-web-admin</module>
         <module>../itoken-web-backend</module>
         <module>../itoken-common-web</module>
+        <module>../itoken-service-redis</module>
     </modules>
 
     <properties>
