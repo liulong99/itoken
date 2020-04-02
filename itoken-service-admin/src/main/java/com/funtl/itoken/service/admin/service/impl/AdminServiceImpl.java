@@ -16,7 +16,6 @@ import tk.mybatis.mapper.entity.Example;
  * @Version 1.0
  **/
 @Service
-@Transactional(readOnly = true)
 public class AdminServiceImpl implements AdminService {
 
     @Autowired
@@ -29,6 +28,7 @@ public class AdminServiceImpl implements AdminService {
     @Override
     @Transactional(readOnly = false)
     public void register(TbSysUser tbSysUser) {
+        tbSysUser.setPassword(DigestUtils.md5DigestAsHex(tbSysUser.getPassword().getBytes()));
         tbSysUserMapper.insert(tbSysUser);
     }
 

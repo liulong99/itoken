@@ -1,10 +1,10 @@
 spring:
   application:
     name: itoken-config
-  boot:
-    admin:
-      client:
-        url: http://localhost:8084
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:8084
   cloud:
     config:
       label: master
@@ -14,22 +14,22 @@ spring:
           search-paths: itoken-config-respo
           username: liulong99
           password: liulong.100
-  zipkin:
-    base-url: http://localhost:9411
+#  zipkin:
+#    base-url: http://localhost:9411
 
 server:
   port: 8888
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
 
-management:
-  endpoint:
-    health:
-      show-details: always
-  endpoints:
-    web:
-      exposure:
-        include: health,info
+#management:
+#  endpoint:
+#    health:
+#      show-details: always
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health,info
