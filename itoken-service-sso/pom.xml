@@ -10,19 +10,25 @@
         <relativePath>../itoken-dependencies/pom.xml</relativePath>
     </parent>
 
-    <artifactId>itoken-service-admin</artifactId>
+    <artifactId>itoken-service-sso</artifactId>
     <packaging>jar</packaging>
 
-    <name>itoken-service-admin</name>
+    <name>itoken-service-sso</name>
     <url>http://www.funtl.com</url>
     <inceptionYear>2018-Now</inceptionYear>
 
     <dependencies>
         <dependency>
             <groupId>com.funtl</groupId>
+            <artifactId>itoken-common-web</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.funtl</groupId>
             <artifactId>itoken-common-service</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -34,7 +40,7 @@
         <repository>
             <id>nexus</id>
             <name>Nexus Repository</name>
-            <url>http://192.168.0.116:8082/repository/maven-public/</url>
+            <url>http://192.168.0.105:8081/repository/maven-public/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -50,7 +56,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.funtl.itoken.service.admin.ServiceAdminApplication</mainClass>
+                    <mainClass>com.funtl.itoken.service.sso.ServiceSSOApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

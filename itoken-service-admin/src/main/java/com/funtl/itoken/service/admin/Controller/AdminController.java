@@ -1,7 +1,7 @@
 package com.funtl.itoken.service.admin.Controller;
 
 import com.funtl.itoken.common.dto.BaseResult;
-import com.funtl.itoken.service.admin.domain.TbSysUser;
+import com.funtl.itoken.common.domain.TbSysUser;
 import com.funtl.itoken.service.admin.service.AdminService;
 import com.google.common.collect.Lists;
 import org.apache.commons.lang3.StringUtils;

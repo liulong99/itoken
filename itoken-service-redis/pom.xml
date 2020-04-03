@@ -21,9 +21,10 @@
         <!-- Project Begin -->
         <dependency>
             <groupId>com.funtl</groupId>
-            <artifactId>itoken-common</artifactId>
+            <artifactId>itoken-common-service</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+
         <!-- Project End -->
 
         <!-- Spring Cloud Begin -->
@@ -74,7 +75,7 @@
         <repository>
             <id>nexus</id>
             <name>Nexus Repository</name>
-            <url>http://192.168.0.111:8082/repository/maven-public/</url>
+            <url>http://192.168.0.116:8082/repository/maven-public/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
