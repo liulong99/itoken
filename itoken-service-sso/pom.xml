@@ -25,7 +25,7 @@
         </dependency>
         <dependency>
             <groupId>com.funtl</groupId>
-            <artifactId>itoken-common-service</artifactId>
+            <artifactId>itoken-service-redis</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
 
@@ -34,13 +34,14 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <repositories>
         <repository>
             <id>nexus</id>
             <name>Nexus Repository</name>
-            <url>http://192.168.0.105:8081/repository/maven-public/</url>
+            <url>http://192.168.0.116:8082/repository/maven-public/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>

@@ -17,6 +17,12 @@ spring:
       max-active: 20
       test-on-borrow: true
       driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    cache: false
+    model: LEGACYHTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
 
 mybatis:
   type-aliases-package: com.funtl.itoken.common.domain
