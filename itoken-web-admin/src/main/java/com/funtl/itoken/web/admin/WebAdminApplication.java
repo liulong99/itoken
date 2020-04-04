@@ -11,7 +11,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @Date 2020/4/2 15:28
  * @Version 1.0
  **/
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.funtl.itoken")
 @EnableDiscoveryClient
 @EnableFeignClients
 public class WebAdminApplication {

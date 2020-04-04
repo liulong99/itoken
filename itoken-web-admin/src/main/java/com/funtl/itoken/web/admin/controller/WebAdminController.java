@@ -14,7 +14,7 @@ import javax.annotation.Resource;
  * @Version 1.0
  **/
 @Controller
-public class AdminController {
+public class WebAdminController {
 
 
     @Resource

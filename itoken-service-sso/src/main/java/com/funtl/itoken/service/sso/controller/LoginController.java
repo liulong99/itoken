@@ -26,7 +26,7 @@ import java.util.UUID;
  * @Version 1.0
  **/
 @Controller
-public class RedisController {
+public class LoginController {
 
     @Autowired
     private LoginService loginService;
@@ -61,6 +61,9 @@ public class RedisController {
                 }
             }
         }
+        if(StringUtils.isNotBlank(url)){
+            model.addAttribute("url",url);
+        }
         return "login";
     }
 
@@ -93,5 +96,11 @@ public class RedisController {
         return "redirect:/login";
     }
 
+    @RequestMapping(value = "logout",method = RequestMethod.GET)
+    public String logout(HttpServletRequest request, HttpServletResponse response,
+                         @RequestParam(required = false)String url, Model model){
+        CookieUtils.deleteCookie(request,response,"token");
+        return login(request,model,url);
+    }
 
 }

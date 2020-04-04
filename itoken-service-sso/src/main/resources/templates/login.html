@@ -36,7 +36,7 @@
             <p class="login-box-msg">欢迎管理员登录</p>
 
             <form action="/login" method="post">
-
+                <input type="hidden" name="url" th:value="${url}" />
                 <div class="alert alert-danger alert-dismissible" th:if="${message != null}">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                     <span th:text="${message}"></span>
