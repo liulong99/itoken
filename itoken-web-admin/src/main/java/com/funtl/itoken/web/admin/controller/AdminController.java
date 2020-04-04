@@ -20,14 +20,8 @@ public class AdminController {
     @Resource
     private AdminService adminService;
 
-    /**
-   * 跳转登录页
-     * @return
-     */
-    @RequestMapping(value = {"","login"},method = RequestMethod.GET)
-    public String login(){
-        String json=adminService.login("","");
-        System.out.println(json);
+    @RequestMapping(value = {"","index"},method = RequestMethod.GET)
+    public String index(){
         return "hello";
     }
 

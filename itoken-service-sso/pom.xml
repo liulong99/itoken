@@ -25,7 +25,7 @@
         </dependency>
         <dependency>
             <groupId>com.funtl</groupId>
-            <artifactId>itoken-service-redis</artifactId>
+            <artifactId>itoken-common-service</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
 

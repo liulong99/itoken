@@ -19,11 +19,11 @@
 
     <dependencies>
         <!-- Project Begin -->
-        <dependency>
-            <groupId>com.funtl</groupId>
-            <artifactId>itoken-common-service</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.funtl</groupId>-->
+<!--            <artifactId>itoken-common-service</artifactId>-->
+<!--            <version>${project.parent.version}</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.funtl</groupId>
             <artifactId>itoken-common</artifactId>
