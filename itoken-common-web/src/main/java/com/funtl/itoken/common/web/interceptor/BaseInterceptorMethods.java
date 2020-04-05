@@ -40,7 +40,7 @@ public class BaseInterceptorMethods {
      */
     public static boolean preHandleForLogin(HttpServletRequest request, HttpServletResponse response, Object handler, String url) {
         String token = CookieUtils.getCookieValue(request, WebConstants.SESSION_TOKEN);
-
+        System.out.println("HOSTS_SSO : "+HOSTS_SSO+"+++++++++++++++++++++++++");
         // token 为空表示一定没有登录
         if (StringUtils.isBlank(token)) {
             try {

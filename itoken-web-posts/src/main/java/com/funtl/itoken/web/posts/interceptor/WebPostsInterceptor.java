@@ -25,7 +25,8 @@ public class WebPostsInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        return BaseInterceptorMethods.preHandleForLogin(request, response, handler, "http://localhost:8602/" + request.getServletPath());
+        boolean b = BaseInterceptorMethods.preHandleForLogin(request, response, handler, "http://localhost:8602" + request.getServletPath());
+        return b;
     }
 
     @Override
