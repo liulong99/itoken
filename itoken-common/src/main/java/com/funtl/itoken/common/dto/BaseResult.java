@@ -56,6 +56,10 @@ public class BaseResult implements Serializable {
         return createResult(RESULT_OK,data,SUCCESS,null,null);
     }
 
+    public static BaseResult ok(String success){
+        return createResult(RESULT_OK,null,success,null,null);
+    }
+
     public static BaseResult ok(Object data,Cursor cursor){
         return createResult(RESULT_OK,data,SUCCESS,cursor,null);
     }

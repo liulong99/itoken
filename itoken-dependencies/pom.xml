@@ -33,6 +33,7 @@
         <module>../itoken-zipkin</module>
         <module>../itoken-eureka</module>
         <module>../itoken-service-sso</module>
+        <module>../itoken-service-posts</module>
     </modules>
 
     <properties>
