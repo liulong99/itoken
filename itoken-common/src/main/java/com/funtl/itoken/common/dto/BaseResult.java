@@ -25,7 +25,7 @@ public class BaseResult implements Serializable {
     private List<Error> errors;
 
     @Data
-    private static class Cursor{
+    public static class Cursor{
         private int total;
         private int offset;
         private int limit;
@@ -54,6 +54,10 @@ public class BaseResult implements Serializable {
 
     public static BaseResult ok(Object data){
         return createResult(RESULT_OK,data,SUCCESS,null,null);
+    }
+
+    public static BaseResult ok(Object data,Cursor cursor){
+        return createResult(RESULT_OK,data,SUCCESS,cursor,null);
     }
 
     public static BaseResult notOk(List<BaseResult.Error> errors){

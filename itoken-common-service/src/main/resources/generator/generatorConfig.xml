@@ -37,15 +37,15 @@
                 type="XMLMAPPER"/>
 
         <!--&lt;!&ndash; 管理员服务 Begin &ndash;&gt;-->
-        <!--<table catalog="itoken-service-admin" tableName="tb_sys_user">-->
-            <!--<generatedKey column="user_code" sqlStatement="Mysql" identity="false"/>-->
-        <!--</table>-->
+        <table catalog="itoken-service-admin" tableName="tb_sys_user">
+            <generatedKey column="user_code" sqlStatement="Mysql" identity="false"/>
+        </table>
         <!--&lt;!&ndash; 管理员服务 End &ndash;&gt;-->
 
         <!--&lt;!&ndash; 文章服务 Begin &ndash;&gt;-->
-        <!--<table catalog="itoken-service-posts" tableName="tb_posts_post">-->
-            <!--<generatedKey column="post_guid" sqlStatement="Mysql" identity="false"/>-->
-        <!--</table>-->
+        <table catalog="itoken-service-posts" tableName="tb_posts_post">
+            <generatedKey column="post_guid" sqlStatement="Mysql" identity="false"/>
+        </table>
         <!--&lt;!&ndash; 文章服务 End &ndash;&gt;-->
 
         <!-- 数字货币服务 Begin -->
@@ -55,7 +55,7 @@
         <!--</table>-->
 
         <!-- 交易所实时货币交易数据 -->
-        <table catalog="itoken-service-digiccy" tableName="tb_digiccy_exchange_mkt" />
+<!--        <table catalog="itoken-service-digiccy" tableName="tb_digiccy_exchange_mkt" />-->
         <!-- 数字货币服务 End -->
     </context>
 </generatorConfiguration>
