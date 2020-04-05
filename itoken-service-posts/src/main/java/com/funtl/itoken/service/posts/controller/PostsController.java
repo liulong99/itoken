@@ -78,7 +78,7 @@ public class PostsController {
      * @param tbPostsPostJson
      * @return
      */
-    @RequestMapping(value = "page/{pagNum}/{pageSize}")
+    @RequestMapping(value = "page/{pageNum}/{pageSize}",method = RequestMethod.GET)
     public BaseResult page(@PathVariable(required = true)int pageNum,
                            @PathVariable(required = true)int pageSize,
                            @RequestParam(required = false)String tbPostsPostJson){
