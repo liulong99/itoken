@@ -34,6 +34,7 @@
         <module>../itoken-eureka</module>
         <module>../itoken-service-sso</module>
         <module>../itoken-service-posts</module>
+        <module>../itoken-web-posts</module>
     </modules>
 
     <properties>

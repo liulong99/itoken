@@ -5,6 +5,9 @@ import com.funtl.itoken.common.dto.BaseResult;
 import com.funtl.itoken.common.utils.MapperUtils;
 import com.funtl.itoken.service.posts.service.PostsService;
 import com.github.pagehelper.PageInfo;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -78,6 +81,12 @@ public class PostsController {
      * @param tbPostsPostJson
      * @return
      */
+    @ApiOperation(value = "文章管理分页查询")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "pageNum", value = "页码", required = true, dataType = "int", paramType = "path"),
+            @ApiImplicitParam(name = "pageSize", value = "笔数", required = true, dataType = "int", paramType = "path"),
+            @ApiImplicitParam(name = "tbPostsPostJson", value = "文章对象 JSON 字符串", required = false, dataTypeClass = String.class, paramType = "json")
+    })
     @RequestMapping(value = "page/{pageNum}/{pageSize}",method = RequestMethod.GET)
     public BaseResult page(@PathVariable(required = true)int pageNum,
                            @PathVariable(required = true)int pageSize,

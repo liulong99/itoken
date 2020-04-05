@@ -20,6 +20,7 @@ import java.util.Date;
 @Getter
 @Setter
 public class BaseDomain implements Serializable {
+    private static final long serialVersionUID = 6417898683667250066L;
     /**
      * 创建者
      */

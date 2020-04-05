@@ -19,7 +19,7 @@ import java.util.Date;
  **/
 @Service
 @Transactional(readOnly = true)
-public class BaseServiceImpl<T extends BaseDomain,D extends MyMapper<T>> implements BaseService<T> {
+public abstract class BaseServiceImpl<T extends BaseDomain, D extends MyMapper<T>> implements BaseService<T> {
 
     @Autowired
     private D dao;
