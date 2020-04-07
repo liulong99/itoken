@@ -3,11 +3,11 @@ package com.funtl.itoken.common.web.interceptor;
 import com.funtl.itoken.common.domain.TbSysUser;
 import com.funtl.itoken.common.utils.CookieUtils;
 import com.funtl.itoken.common.utils.MapperUtils;
+import com.funtl.itoken.common.web.constants.WebConstants;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
-import com.funtl.itoken.common.web.constants.WebConstants;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -27,7 +27,7 @@ import java.io.IOException;
 public class BaseInterceptorMethods {
 
     @Value("${hosts.sso}")
-    private static String HOSTS_SSO;
+    public static String HOSTS_SSO;
 
     /**
      * 登录方法拦截
@@ -40,7 +40,7 @@ public class BaseInterceptorMethods {
      */
     public static boolean preHandleForLogin(HttpServletRequest request, HttpServletResponse response, Object handler, String url) {
         String token = CookieUtils.getCookieValue(request, WebConstants.SESSION_TOKEN);
-        System.out.println("HOSTS_SSO : "+HOSTS_SSO+"+++++++++++++++++++++++++");
+
         // token 为空表示一定没有登录
         if (StringUtils.isBlank(token)) {
             try {

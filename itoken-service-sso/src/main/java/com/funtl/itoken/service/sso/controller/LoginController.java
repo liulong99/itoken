@@ -96,11 +96,28 @@ public class LoginController {
         return "redirect:/login";
     }
 
+    /**
+     * 注销
+     * @param request
+     * @param response
+     * @param url
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "logout",method = RequestMethod.GET)
     public String logout(HttpServletRequest request, HttpServletResponse response,
                          @RequestParam(required = false)String url, Model model){
-        CookieUtils.deleteCookie(request,response,"token");
-        return login(request,model,url);
+        try {
+            CookieUtils.deleteCookie(request, response, "token");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        if (StringUtils.isNotBlank(url)) {
+            return "redirect:/login?url=" + url;
+        } else {
+            return "redirect:/login";
+        }
     }
 
 }

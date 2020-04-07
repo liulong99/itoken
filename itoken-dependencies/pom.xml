@@ -35,6 +35,7 @@
         <module>../itoken-service-sso</module>
         <module>../itoken-service-posts</module>
         <module>../itoken-web-posts</module>
+        <module>../itoken-service-upload</module>
     </modules>
 
     <properties>
