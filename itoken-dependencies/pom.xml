@@ -36,6 +36,9 @@
         <module>../itoken-service-posts</module>
         <module>../itoken-web-posts</module>
         <module>../itoken-service-upload</module>
+        <module>../itoken-service-digiccy</module>
+        <module>../itoken-web-digiccy</module>
+        <module>../itoken-service-collection</module>
     </modules>
 
     <properties>
